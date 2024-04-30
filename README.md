@@ -1,6 +1,8 @@
 This is a repository of projects that I have done to work towards freecodecamp certifications.
 
- ~~~ Relational Databases Certification ~~~
+~~~                             ~~~
+--- Relational Databases Certification ---
+
 1. Celestial Bodies Database
   - universe.sql generates a database with five tables (galaxies, stars, planets, moons, and nasa_missions) full of mostly made up data about them
 2. World Cup Database
