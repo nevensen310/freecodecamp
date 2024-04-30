@@ -270,10 +270,10 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 COPY public.galaxy (galaxy_id, name, age_in_billions_of_years, distance_from_earth_in_millions_ltyrs, color) FROM stdin;
 1	Milky Way	13.80	0.000	White
 2	Andromeda	10.80	13.700	Blue
-3	Bee galaxy	12.30	18.700	Yellow
-4	Mac Galaxy	13.00	2.700	Brown
-5	Cooper 2	12.70	1.300	Red
-6	Blue Galaxy	11.60	14.830	Blue
+3	Antennae galaxies	12.30	18.700	Yellow
+4	Bear Paw Galaxy	13.00	2.700	Brown
+5	Black Eye	12.70	1.300	Red
+6	Butterfly Galaxies	11.60	14.830	Blue
 \.
 
 
@@ -284,24 +284,24 @@ COPY public.galaxy (galaxy_id, name, age_in_billions_of_years, distance_from_ear
 COPY public.moon (moon_id, name, planet_id, distance_from_planet, is_spherical) FROM stdin;
 1	Moon	1	12	t
 2	Titan	2	13	t
-3	JGn284	3	24	t
-4	Fire	4	873	t
-5	Bee	5	293	f
-6	Rizzo	6	18457	t
-7	Cooper	7	8394	f
-8	Bamussa	8	83	t
-9	Blue	9	12	t
-10	Ivy	10	384	t
-11	Cubs	11	89	t
-12	Red	12	4	t
-13	Me	1	8	t
-14	Mac	2	4	t
-15	Cooper 3	3	48	t
-16	Dude	4	2	t
-17	Chris	5	8	t
-18	Dave	6	9	t
-19	Hades	7	3	t
-20	Apollo	8	4	t
+3	Phobos	3	24	t
+4	Deimos	4	873	t
+5	Europa	293	f
+6	Callisto	6	18457	t
+7	Themisto	7	8394	f
+8	Sponde	8	83	t
+9	Mimas	9	12	t
+10	Phoebe	10	384	t
+11	Janus	11	89	t
+12	Epimetheus	12	4	t
+13	Pan	1	8	t
+14	Loge	2	4	t
+15	Beli 3	3	48	t
+16	Ariel	4	2	t
+17	Oberon	5	8	t
+18	Miranda	6	9	t
+19	Juliet	7	3	t
+20	Puck	8	4	t
 \.
 
 
@@ -310,9 +310,9 @@ COPY public.moon (moon_id, name, planet_id, distance_from_planet, is_spherical) 
 --
 
 COPY public.nasa_missions (nasa_missions_id, name, planet_id, moon_id, goal) FROM stdin;
-1	Apollo 11	\N	1	Moon Exploration
-2	Honey	5	\N	Gather Honey
-3	Mars Rover	2	\N	Explore Mars
+1	Apollo 11	\N	1	The moon landing
+2	Apollo 7	\N	1	Demonstrate crew/equipment capabilities
+3	Apollo 10	\N	1	Rehearse the moon landing
 \.
 
 
@@ -321,18 +321,18 @@ COPY public.nasa_missions (nasa_missions_id, name, planet_id, moon_id, goal) FRO
 --
 
 COPY public.planet (planet_id, name, star_id, has_life, latin_name) FROM stdin;
-1	Earth	1	t	Vearth
-2	Mars	1	f	Mario
-3	Gct256	2	f	Goop
-4	H3ll	2	t	Hades
-5	Jerry	3	t	Jazz
-6	Queen	3	f	Queen Bee
-7	Macy	4	t	Schnauzer
-8	Harper	4	t	GSD
-9	Bunny	5	t	Devil
-10	Squirrel	5	t	Squire
-11	Aqua	6	f	Water
-12	Aquamarine	6	f	Blue Water
+1	Earth	1	t	Terra
+2	Mars	1	f	Mars
+3	Kepler-186f	2	f	\N
+4	Kepler-16b	2	t	\N
+5	Mercury	3	t	Mercurius
+6	Venus	3	f	Venus
+7	Saturn	4	t	Saturnus
+8	Kepler-155c	4	t	\N
+9	Kepler-235e	5	t	\N
+10	Neptune	5	t	Neptunus
+11	Jupiter	6	f	Jupiter
+12	Uranus	6	f	Uranus
 \.
 
 
@@ -341,12 +341,12 @@ COPY public.planet (planet_id, name, star_id, has_life, latin_name) FROM stdin;
 --
 
 COPY public.star (star_id, name, galaxy_id, distance_from_earth, star_type) FROM stdin;
-1	Sun	1	145	Yellow
-2	Ae86	2	19485	Blue Star
-3	Stinger	3	19854	Bee
-4	Cornelius Dunn	4	14738	Horse
-5	Yak	5	1248	Cheese Chew
-6	Bluey	6	12834	Blue x2
+1	Sun	1	145	Yellow Dwarf
+2	Atlas	2	19485	White Dwarf
+3	Castor	3	19854 Neutron Star
+4	Libertas	4	14738	Seupergiant
+5	Mira	5	1248	Yellow Dwarf
+6	Petra	6	12834	Red Giant
 \.
 
 
